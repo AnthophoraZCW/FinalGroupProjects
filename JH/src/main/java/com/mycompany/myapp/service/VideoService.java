@@ -17,8 +17,8 @@ public class VideoService {
         this.repository = repository;
     }
 
-    public Video create(Video person) {
-        return repository.save(person);
+    public Video create(Video video) {
+        return repository.save(video);
     }
 
     public Video readById(Long id) {
