@@ -1,3 +1,5 @@
+package com.mycompany.myapp.service;
+
 import com.mycompany.myapp.domain.UserProfile;
 import com.mycompany.myapp.repository.UserProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +10,10 @@ import java.util.List;
 
 @Service
 public class UserProfileService {
-
     private UserProfileRepository repository;
 
     @Autowired
-    public UserProfileService(UserProfileRepository repository) {
+    public UserProfileService (UserProfileRepository repository) {
         this.repository = repository;
     }
 
