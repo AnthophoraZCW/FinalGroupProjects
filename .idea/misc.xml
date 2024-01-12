@@ -9,6 +9,7 @@
     </option>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
@@ -21,6 +22,10 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
 >>>>>>> 1cf2d12 (commented out some code to get mvnw to work again)
+=======
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+>>>>>>> 8d63891 (changed cors in appyml)
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

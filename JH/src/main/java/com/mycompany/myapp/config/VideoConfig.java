@@ -6,12 +6,18 @@ import com.mycompany.myapp.repository.VideoRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 =======
 
 >>>>>>> d7efcb2 (Created VideoConfig + Unit Test)
+=======
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+>>>>>>> 8d63891 (changed cors in appyml)
 public class VideoConfig {
     @Bean
     public CommandLineRunner initData(VideoRepository videoRepository) {
