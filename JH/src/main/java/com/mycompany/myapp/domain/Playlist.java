@@ -123,4 +123,8 @@ public class Playlist implements Serializable {
             "id=" + getId() +
             "}";
     }
+
+    public void setVideos(String videoURL) {
+    }
+    // Created setVideos above for PlaylistService/Update/.setVideos -- line 39
 }
