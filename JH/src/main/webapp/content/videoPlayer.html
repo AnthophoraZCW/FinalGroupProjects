@@ -43,12 +43,14 @@
   </div>
 </div>
 
+<!-- ... (previous HTML code) ... -->
+
 <script>
   // Your JavaScript code
   const videoSource = "https://nexflixclonefinal.s3.amazonaws.com/Toy+Story+(1995)+Trailer+%231+%7C+Movieclips+Classic+Trailers.mp4"; // Replace with your video URL
 
   // Find the video element by its ID
-  const videoElement = document.getElementById('myVideo');
+  const videoElement = document.getElementById('VideoPlayer'); // Correct ID here
 
   // Set the variable as the video source
   videoElement.src = videoSource;
@@ -56,6 +58,9 @@
   // Optionally, you can call load() to ensure the video is reloaded with the new source
   videoElement.load();
 </script>
+
+<!-- ... (rest of the HTML) ... -->
+
 <!-- Add Bootstrap JS and Popper.js (required for Bootstrap) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
@@ -64,7 +69,7 @@
 <!-- Custom JavaScript for improved video playback -->
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const player = document.getElementById('videoPlayer');
+    const player = document.getElementById('myVideo');
 
     // Add event listener to play/pause video on click
     player.addEventListener('click', function () {
