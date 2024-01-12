@@ -7,6 +7,9 @@ const EntitiesMenu = () => {
   return (
     <>
       {/* prettier-ignore */}
+      <MenuItem icon="asterisk" to="/userhome">
+        <Translate contentKey="appuserhome.title" />
+        </MenuItem>
       <MenuItem icon="asterisk" to="/user-profile">
         <Translate contentKey="global.menu.entities.userProfile" />
       </MenuItem>

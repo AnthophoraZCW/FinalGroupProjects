@@ -15,6 +15,7 @@ export default () => {
     <div>
       <ErrorBoundaryRoutes>
         {/* prettier-ignore */}
+        {/* write new component for user homepage */}
         <Route path="user-profile/*" element={<UserProfile />} />
         <Route path="video/*" element={<Video />} />
         <Route path="playlist/*" element={<Playlist />} />
