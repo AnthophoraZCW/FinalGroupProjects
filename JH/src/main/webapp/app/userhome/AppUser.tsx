@@ -26,6 +26,18 @@ function AppUser(){
       <Row title = "Action" fetchUrl={requests.fetchAction} />
       <Row title = "Romance" fetchUrl={requests.fetchRomance}/>
       <Row title = "Comedy" fetchUrl={requests.fetchComedy}/>
+      <Row title = "Fantasy" fetchUrl={requests.fetchAction} />
+      <Row title = "Animation" fetchUrl={requests.fetchRomance}/>
+      <Row title = "Horror" fetchUrl={requests.fetchComedy}/>
+      <Row title = "Sci-Fi" fetchUrl={requests.fetchAction} />
+      <Row title = "Drama" fetchUrl={requests.fetchRomance}/>
+      <Row title = "Adventure" fetchUrl={requests.fetchComedy}/>
+      <Row title = "Crime" fetchUrl={requests.fetchAction} />
+      <Row title = "Thriller" fetchUrl={requests.fetchRomance}/>
+      <Row title = "Music" fetchUrl={requests.fetchComedy}/>
+      <Row title = "Family" fetchUrl={requests.fetchAction} />
+      <Row title = "Sports" fetchUrl={requests.fetchRomance}/>
+      <Row title = "Biography" fetchUrl={requests.fetchComedy}/>
     </div>
     </>
   );
