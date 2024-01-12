@@ -8,6 +8,7 @@
       </list>
     </option>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
@@ -15,6 +16,11 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
 >>>>>>> d7efcb2 (Created VideoConfig + Unit Test)
+=======
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+>>>>>>> 1cf2d12 (commented out some code to get mvnw to work again)
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

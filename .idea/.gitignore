@@ -2,10 +2,16 @@
 /shelf/
 /workspace.xml
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 1cf2d12 (commented out some code to get mvnw to work again)
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+<<<<<<< HEAD
 =======
 >>>>>>> d7efcb2 (Created VideoConfig + Unit Test)
+=======
+>>>>>>> 1cf2d12 (commented out some code to get mvnw to work again)
