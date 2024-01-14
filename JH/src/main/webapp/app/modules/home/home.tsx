@@ -59,7 +59,9 @@ export const Home = () => {
 
         <ul>
           <li>
-            <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">
+            {/* link to appuser homepage test
+              kinda works, opens new page, need to relog*/}
+            <a href="http://localhost:9000/AppUser" target="_blank" rel="noopener noreferrer">
               <Translate contentKey="home.link.homepage">JHipster homepage</Translate>
             </a>
           </li>

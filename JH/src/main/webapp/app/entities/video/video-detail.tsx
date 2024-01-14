@@ -84,7 +84,17 @@ export const VideoDetail = () => {
               <Translate contentKey="jhApp.video.videoURL">Video URL</Translate>
             </span>
           </dt>
+          <Link to= {videoEntity.videoURL}>
           <dd>{videoEntity.videoURL}</dd>
+          </Link>
+          <dt>
+            <span id="imageURL">
+              <Translate contentKey="jhApp.video.imageURL">Image URL</Translate>
+            </span>
+          </dt>
+          <Link to= {videoEntity.imageURL}> 
+          <dd>{videoEntity.imageURL}</dd>
+          </Link>
         </dl>
         <Button tag={Link} to="/video" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}
@@ -93,12 +103,13 @@ export const VideoDetail = () => {
           </span>
         </Button>
         &nbsp;
-        <Button tag={Link} to={`/video/${videoEntity.id}/edit`} replace color="primary">
+        {/* uncomment code below for edit button back */}
+        {/* <Button tag={Link} to={`/video/${videoEntity.id}/edit`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.edit">Edit</Translate>
           </span>
-        </Button>
+        </Button> */}
       </Col>
     </Row>
   );

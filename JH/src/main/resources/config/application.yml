@@ -17,6 +17,14 @@
 ---
 # Conditionally disable springdoc on missing api-docs profile
 spring:
+  datasource:
+    url: jdbc:h2:file:./target/h2db/db/jh
+    driverClassName: org.h2.Driver
+    username: jh
+    password:
+    initialization-mode: always
+    schema: classpath:schema.sql
+    data: classpath:dump.sql
   config:
     activate:
       on-profile: '!api-docs'
@@ -137,6 +145,11 @@ spring:
   mvc:
     problemdetails:
       enabled: true
+      # allows localhost:9000/userhome to access the API, delete if needed
+      # add more origins separated by comma if needed
+      cors:
+      allowed-origins: http://localhost:9000/userhome
+      allowed-methods: GET, POST, PUT, DELETE, OPTIONS
   task:
     execution:
       thread-name-prefix: jh-task-

@@ -146,6 +146,9 @@ public class VideoResource {
                 if (video.getVideoURL() != null) {
                     existingVideo.setVideoURL(video.getVideoURL());
                 }
+                if (video.getImageURL() != null) {
+                    existingVideo.setImageURL(video.getImageURL());
+                }
 
                 return existingVideo;
             })

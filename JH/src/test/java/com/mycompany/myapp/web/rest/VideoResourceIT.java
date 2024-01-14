@@ -57,6 +57,9 @@ class VideoResourceIT {
     private static final String DEFAULT_VIDEO_URL = "AAAAAAAAAA";
     private static final String UPDATED_VIDEO_URL = "BBBBBBBBBB";
 
+    private static final String DEFAULT_IMAGE_URL = "AAAAAAAAAA";
+    private static final String UPDATED_IMAGE_URL = "BBBBBBBBBB";
+
     private static final String ENTITY_API_URL = "/api/videos";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
 
@@ -90,7 +93,8 @@ class VideoResourceIT {
             .episode(DEFAULT_EPISODE)
             .season(DEFAULT_SEASON)
             .rating(DEFAULT_RATING)
-            .videoURL(DEFAULT_VIDEO_URL);
+            .videoURL(DEFAULT_VIDEO_URL)
+            .imageURL(DEFAULT_IMAGE_URL);
         return video;
     }
 
@@ -110,7 +114,8 @@ class VideoResourceIT {
             .episode(UPDATED_EPISODE)
             .season(UPDATED_SEASON)
             .rating(UPDATED_RATING)
-            .videoURL(UPDATED_VIDEO_URL);
+            .videoURL(UPDATED_VIDEO_URL)
+            .imageURL(UPDATED_IMAGE_URL);
         return video;
     }
 
@@ -141,6 +146,7 @@ class VideoResourceIT {
         assertThat(testVideo.getSeason()).isEqualTo(DEFAULT_SEASON);
         assertThat(testVideo.getRating()).isEqualTo(DEFAULT_RATING);
         assertThat(testVideo.getVideoURL()).isEqualTo(DEFAULT_VIDEO_URL);
+        assertThat(testVideo.getImageURL()).isEqualTo(DEFAULT_IMAGE_URL);
     }
 
     @Test
@@ -181,7 +187,8 @@ class VideoResourceIT {
             .andExpect(jsonPath("$.[*].episode").value(hasItem(DEFAULT_EPISODE)))
             .andExpect(jsonPath("$.[*].season").value(hasItem(DEFAULT_SEASON)))
             .andExpect(jsonPath("$.[*].rating").value(hasItem(DEFAULT_RATING.toString())))
-            .andExpect(jsonPath("$.[*].videoURL").value(hasItem(DEFAULT_VIDEO_URL)));
+            .andExpect(jsonPath("$.[*].videoURL").value(hasItem(DEFAULT_VIDEO_URL)))
+            .andExpect(jsonPath("$.[*].imageURL").value(hasItem(DEFAULT_IMAGE_URL)));
     }
 
     @Test
@@ -204,7 +211,8 @@ class VideoResourceIT {
             .andExpect(jsonPath("$.episode").value(DEFAULT_EPISODE))
             .andExpect(jsonPath("$.season").value(DEFAULT_SEASON))
             .andExpect(jsonPath("$.rating").value(DEFAULT_RATING.toString()))
-            .andExpect(jsonPath("$.videoURL").value(DEFAULT_VIDEO_URL));
+            .andExpect(jsonPath("$.videoURL").value(DEFAULT_VIDEO_URL))
+            .andExpect(jsonPath("$.imageURL").value(DEFAULT_IMAGE_URL));
     }
 
     @Test
@@ -235,7 +243,8 @@ class VideoResourceIT {
             .episode(UPDATED_EPISODE)
             .season(UPDATED_SEASON)
             .rating(UPDATED_RATING)
-            .videoURL(UPDATED_VIDEO_URL);
+            .videoURL(UPDATED_VIDEO_URL)
+            .imageURL(UPDATED_IMAGE_URL);
 
         restVideoMockMvc
             .perform(
@@ -258,6 +267,7 @@ class VideoResourceIT {
         assertThat(testVideo.getSeason()).isEqualTo(UPDATED_SEASON);
         assertThat(testVideo.getRating()).isEqualTo(UPDATED_RATING);
         assertThat(testVideo.getVideoURL()).isEqualTo(UPDATED_VIDEO_URL);
+        assertThat(testVideo.getImageURL()).isEqualTo(UPDATED_IMAGE_URL);
     }
 
     @Test
@@ -333,7 +343,8 @@ class VideoResourceIT {
             .releaseYear(UPDATED_RELEASE_YEAR)
             .season(UPDATED_SEASON)
             .rating(UPDATED_RATING)
-            .videoURL(UPDATED_VIDEO_URL);
+            .videoURL(UPDATED_VIDEO_URL)
+            .imageURL(UPDATED_IMAGE_URL);
 
         restVideoMockMvc
             .perform(
@@ -356,6 +367,7 @@ class VideoResourceIT {
         assertThat(testVideo.getSeason()).isEqualTo(UPDATED_SEASON);
         assertThat(testVideo.getRating()).isEqualTo(UPDATED_RATING);
         assertThat(testVideo.getVideoURL()).isEqualTo(UPDATED_VIDEO_URL);
+        assertThat(testVideo.getImageURL()).isEqualTo(UPDATED_IMAGE_URL);
     }
 
     @Test
@@ -379,7 +391,8 @@ class VideoResourceIT {
             .episode(UPDATED_EPISODE)
             .season(UPDATED_SEASON)
             .rating(UPDATED_RATING)
-            .videoURL(UPDATED_VIDEO_URL);
+            .videoURL(UPDATED_VIDEO_URL)
+            .imageURL(UPDATED_IMAGE_URL);
 
         restVideoMockMvc
             .perform(
@@ -402,6 +415,7 @@ class VideoResourceIT {
         assertThat(testVideo.getSeason()).isEqualTo(UPDATED_SEASON);
         assertThat(testVideo.getRating()).isEqualTo(UPDATED_RATING);
         assertThat(testVideo.getVideoURL()).isEqualTo(UPDATED_VIDEO_URL);
+        assertThat(testVideo.getImageURL()).isEqualTo(UPDATED_IMAGE_URL);
     }
 
     @Test

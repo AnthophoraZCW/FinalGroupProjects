@@ -21,7 +21,8 @@ public class VideoTestSamples {
             .duration(1)
             .episode(1)
             .season(1)
-            .videoURL("videoURL1");
+            .videoURL("videoURL1")
+            .imageURL("imageURL1");
     }
 
     public static Video getVideoSample2() {
@@ -34,7 +35,8 @@ public class VideoTestSamples {
             .duration(2)
             .episode(2)
             .season(2)
-            .videoURL("videoURL2");
+            .videoURL("videoURL2")
+            .imageURL("imageURL2");
     }
 
     public static Video getVideoRandomSampleGenerator() {
@@ -47,6 +49,7 @@ public class VideoTestSamples {
             .duration(intCount.incrementAndGet())
             .episode(intCount.incrementAndGet())
             .season(intCount.incrementAndGet())
-            .videoURL(UUID.randomUUID().toString());
+            .videoURL(UUID.randomUUID().toString())
+            .imageURL(UUID.randomUUID().toString());
     }
 }
