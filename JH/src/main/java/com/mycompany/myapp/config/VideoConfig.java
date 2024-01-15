@@ -5,7 +5,9 @@ import com.mycompany.myapp.domain.enumeration.Rating;
 import com.mycompany.myapp.repository.VideoRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class VideoConfig {
     @Bean
     public CommandLineRunner initData(VideoRepository videoRepository) {

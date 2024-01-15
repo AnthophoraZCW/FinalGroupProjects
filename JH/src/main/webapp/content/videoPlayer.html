@@ -1,0 +1,116 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Video Player</title>-->
+<!--  &lt;!&ndash; Add Bootstrap CSS &ndash;&gt;-->
+<!--  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+<!--  <style>-->
+<!--    body {-->
+<!--      margin: 0;-->
+<!--      padding: 0;-->
+<!--      display: flex;-->
+<!--      justify-content: center;-->
+<!--      align-items: center;-->
+<!--      height: 100vh;-->
+<!--      background-color: #000;-->
+<!--    }-->
+
+<!--    video {-->
+<!--      width: 100%;-->
+<!--      max-width: 800px;-->
+<!--    }-->
+
+<!--    .exit-button {-->
+<!--      position: absolute;-->
+<!--      top: 10px;-->
+<!--      right: 10px;-->
+<!--      z-index: 1000;-->
+<!--    }-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="container">-->
+<!--  <div class="row justify-content-center">-->
+<!--    <div class="col-md-8">-->
+<!--      <button class="btn btn-outline-light exit-button" onclick="exitFullscreen()">Exit</button>-->
+
+<!--      &lt;!&ndash; Button to navigate to a URL &ndash;&gt;-->
+<!--      <button class="btn btn-primary" onclick="navigateToURL('https://nexflixclonefinal.s3.amazonaws.com/Toy+Story+(1995)+Trailer+%231+%7C+Movieclips+Classic+Trailers.mp4')">Go to Website</button>-->
+
+<!--      &lt;!&ndash; Video player &ndash;&gt;-->
+<!--      <video controls id="VideoPlayer">-->
+<!--        Your browser does not support the video tag.-->
+<!--      </video>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; ... (previous HTML code) ... &ndash;&gt;-->
+
+<!--<script>-->
+<!--  // Your JavaScript code-->
+<!--  const videoSource = "";-->
+
+<!--  // Find the video element by its ID-->
+<!--  const videoElement = document.getElementById('VideoPlayer');-->
+
+<!--  // Set the variable as the video source-->
+<!--  videoElement.src = videoSource;-->
+
+<!--  // Optionally, you can call load() to ensure the video is reloaded with the new source-->
+<!--  videoElement.load();-->
+
+<!--  // Function to navigate to a URL-->
+<!--  function navigateToURL(url) {-->
+<!--    window.location.href = url;-->
+<!--  }-->
+<!--</script>-->
+
+<!--&lt;!&ndash; ... (rest of the HTML) ... &ndash;&gt;-->
+
+<!--&lt;!&ndash; Add Bootstrap JS and Popper.js (required for Bootstrap) &ndash;&gt;-->
+<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+
+<!--&lt;!&ndash; Custom JavaScript for improved video playback &ndash;&gt;-->
+<!--<script>-->
+<!--  document.addEventListener('DOMContentLoaded', function () {-->
+<!--    const player = document.getElementById('myVideo');-->
+
+<!--    // Add event listener to play/pause video on click-->
+<!--    player.addEventListener('click', function () {-->
+<!--      if (player.paused) {-->
+<!--        player.play();-->
+<!--      } else {-->
+<!--        player.pause();-->
+<!--      }-->
+<!--    });-->
+
+<!--    // Add event listener to toggle fullscreen on double click-->
+<!--    player.addEventListener('dblclick', function () {-->
+<!--      if (!document.fullscreenElement) {-->
+<!--        player.requestFullscreen();-->
+<!--      } else {-->
+<!--        document.exitFullscreen();-->
+<!--      }-->
+<!--    });-->
+<!--  });-->
+
+<!--  // Function to exit fullscreen-->
+<!--  function exitFullscreen() {-->
+<!--    if (document.exitFullscreen) {-->
+<!--      document.exitFullscreen();-->
+<!--    } else if (document.mozCancelFullScreen) {-->
+<!--      document.mozCancelFullScreen();-->
+<!--    } else if (document.webkitExitFullscreen) {-->
+<!--      document.webkitExitFullscreen();-->
+<!--    } else if (document.msExitFullscreen) {-->
+<!--      document.msExitFullscreen();-->
+<!--    }-->
+<!--  }-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

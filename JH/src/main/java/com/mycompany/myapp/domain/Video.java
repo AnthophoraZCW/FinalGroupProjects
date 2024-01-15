@@ -53,6 +53,9 @@ public class Video implements Serializable {
     @Column(name = "video_url")
     private String videoURL;
 
+    @Column(name = "image_url")
+    private String imageURL;
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "video")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     @JsonIgnoreProperties(value = { "video", "postedBy" }, allowSetters = true)
@@ -200,6 +203,19 @@ public class Video implements Serializable {
         this.videoURL = videoURL;
     }
 
+    public String getImageURL() {
+        return this.imageURL;
+    }
+
+    public Video imageURL(String imageURL) {
+        this.setImageURL(imageURL);
+        return this;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
     public Set<Comment> getComments() {
         return this.comments;
     }
@@ -326,6 +342,7 @@ public class Video implements Serializable {
             ", season=" + getSeason() +
             ", rating='" + getRating() + "'" +
             ", videoURL='" + getVideoURL() + "'" +
+            ", imageURL='" + getImageURL() + "'" +
             "}";
     }
 }
