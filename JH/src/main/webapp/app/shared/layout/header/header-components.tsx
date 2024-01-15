@@ -4,9 +4,10 @@ import { Translate } from 'react-jhipster';
 import { NavItem, NavLink, NavbarBrand } from 'reactstrap';
 import { NavLink as Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import 'app/userhome/cssfiles/AppUser.scss';
 
 export const BrandIcon = props => (
-  <div {...props} className="brand-icon">
+  <div {...props} className="icon_container">
     <img src="/content/images/VLALogo.png" alt="Logo" />
   </div>
 );
