@@ -100,7 +100,7 @@ console.log(url);
           </video>
 
         )}
-
+<p>comments go here</p>
 
       </dl>
       <Button tag={Link} to="/video" replace color="info" data-cy="entityDetailsBackButton">
