@@ -23,11 +23,12 @@ function AppUser(){
       {/* <Navi/> */}
       <Banner/>
       <h1>
-        Howdy! Welcome to VLA (Netflix Clone)
+        Welcome to VLA
       </h1>
       <h2> 
         
       </h2>
+      {/* <Row categoryTitle = "All Films" fetchUrl={requests.fetchAll} /> */}
       <Row categoryTitle = "Action" fetchUrl={requests.fetchAction} />
       <Row categoryTitle = "Romance" fetchUrl={requests.fetchRomance}/>
       <Row categoryTitle = "Comedy" fetchUrl={requests.fetchComedy}/>

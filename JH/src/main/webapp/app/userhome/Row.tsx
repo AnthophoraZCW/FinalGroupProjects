@@ -16,7 +16,7 @@ function Row( {categoryTitle, fetchUrl} ) {
       return request;
     }
     fetchData();
-  }, [fetchUrl]);
+  }, []);
 
     // console.log(videos);
    
