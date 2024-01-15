@@ -16,6 +16,7 @@ import PageNotFound from 'app/shared/error/page-not-found';
 import { AUTHORITIES } from 'app/config/constants';
 import UserHomeRoute from "app/userhome/userHomeRoute";
 
+
 const loading = <div>loading ...</div>;
 
 const Account = Loadable({
