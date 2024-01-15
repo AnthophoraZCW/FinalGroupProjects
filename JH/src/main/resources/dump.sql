@@ -1,7 +1,7 @@
--- H2 2.2.224; 
-SET DB_CLOSE_DELAY -1;         
-;              
-CREATE USER IF NOT EXISTS "JH" SALT 'b0bec3d4a9b9ae7d' HASH '5aeea8a6fb83d88ba579e1903a727c1ed4893722cc3ca9b1ce089ac01e9bc1ce' ADMIN;          
+-- H2 2.2.224;
+SET DB_CLOSE_DELAY -1;
+;
+CREATE USER IF NOT EXISTS "JH" SALT 'b0bec3d4a9b9ae7d' HASH '5aeea8a6fb83d88ba579e1903a727c1ed4893722cc3ca9b1ce089ac01e9bc1ce' ADMIN;
 CREATE CACHED TABLE "PUBLIC"."DATABASECHANGELOG"(
     "ID" CHARACTER VARYING(255) NOT NULL,
     "AUTHOR" CHARACTER VARYING(255) NOT NULL,
@@ -17,8 +17,8 @@ CREATE CACHED TABLE "PUBLIC"."DATABASECHANGELOG"(
     "CONTEXTS" CHARACTER VARYING(255),
     "LABELS" CHARACTER VARYING(255),
     "DEPLOYMENT_ID" CHARACTER VARYING(10)
-);   
--- 17 +/- SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG;       
+);
+-- 17 +/- SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOG;
 INSERT INTO "PUBLIC"."DATABASECHANGELOG" VALUES
 ('00000000000001', 'jhipster', 'config/liquibase/changelog/00000000000000_initial_schema.xml', TIMESTAMP '2024-01-08 10:12:11.391428', 1, 'EXECUTED', '9:3d15ce8389bddb1666f01b768d03e89b', 'createTable tableName=jhi_user; createTable tableName=jhi_authority; createTable tableName=jhi_user_authority; addPrimaryKey tableName=jhi_user_authority; addForeignKeyConstraint baseTableName=jhi_user_authority, constraintName=fk_authority_name, ...', '', NULL, '4.24.0', NULL, NULL, '4726731318'),
 ('20240108151016-1', 'jhipster', 'config/liquibase/changelog/20240108151016_added_entity_UserProfile.xml', TIMESTAMP '2024-01-08 10:14:08.169852', 2, 'EXECUTED', '9:c65f8c4302489b0d67ae2445a3414c4a', 'createTable tableName=user_profile', '', NULL, '4.24.0', NULL, NULL, '4726848137'),
@@ -33,21 +33,21 @@ INSERT INTO "PUBLIC"."DATABASECHANGELOG" VALUES
 ('20240108151416-1', 'jhipster', 'config/liquibase/changelog/20240108151416_added_entity_Category.xml', TIMESTAMP '2024-01-08 10:14:08.214811', 11, 'EXECUTED', '9:e5c68d8e1ef3d9e55239a966ed04ec67', 'createTable tableName=category', '', NULL, '4.24.0', NULL, NULL, '4726848137'),
 ('20240108151416-1-relations', 'jhipster', 'config/liquibase/changelog/20240108151416_added_entity_Category.xml', TIMESTAMP '2024-01-08 10:14:08.217414', 12, 'EXECUTED', '9:05195c6ecae7ac40de9a9c5eb6157518', 'createTable tableName=rel_category__videos; addPrimaryKey tableName=rel_category__videos', '', NULL, '4.24.0', NULL, NULL, '4726848137'),
 ('20240108151416-1-data', 'jhipster', 'config/liquibase/changelog/20240108151416_added_entity_Category.xml', TIMESTAMP '2024-01-08 10:14:08.219882', 13, 'EXECUTED', '9:a4b3622e1341399342efc10f48b96199', 'loadData tableName=category', '', NULL, '4.24.0', 'faker', NULL, '4726848137'),
-('20240108151016-2', 'jhipster', 'config/liquibase/changelog/20240108151016_added_entity_constraints_UserProfile.xml', TIMESTAMP '2024-01-08 10:14:08.22411', 14, 'EXECUTED', '9:54bce104c0e8495f908ac6cea3d9963e', 'addForeignKeyConstraint baseTableName=user_profile, constraintName=fk_user_profile__playlist_id, referencedTableName=playlist', '', NULL, '4.24.0', NULL, NULL, '4726848137');         
+('20240108151016-2', 'jhipster', 'config/liquibase/changelog/20240108151016_added_entity_constraints_UserProfile.xml', TIMESTAMP '2024-01-08 10:14:08.22411', 14, 'EXECUTED', '9:54bce104c0e8495f908ac6cea3d9963e', 'addForeignKeyConstraint baseTableName=user_profile, constraintName=fk_user_profile__playlist_id, referencedTableName=playlist', '', NULL, '4.24.0', NULL, NULL, '4726848137');
 INSERT INTO "PUBLIC"."DATABASECHANGELOG" VALUES
 ('20240108151216-2', 'jhipster', 'config/liquibase/changelog/20240108151216_added_entity_constraints_Playlist.xml', TIMESTAMP '2024-01-08 10:14:08.234716', 15, 'EXECUTED', '9:cce575eb0a42d727b0ea91a2130ec7be', 'addForeignKeyConstraint baseTableName=rel_playlist__videos, constraintName=fk_rel_playlist__videos__playlist_id, referencedTableName=playlist; addForeignKeyConstraint baseTableName=rel_playlist__videos, constraintName=fk_rel_playlist__videos__vide...', '', NULL, '4.24.0', NULL, NULL, '4726848137'),
 ('20240108151316-2', 'jhipster', 'config/liquibase/changelog/20240108151316_added_entity_constraints_Comment.xml', TIMESTAMP '2024-01-08 10:14:08.241457', 16, 'EXECUTED', '9:f9b5a076442334188d34a1393c7e79ac', 'addForeignKeyConstraint baseTableName=comment, constraintName=fk_comment__video_id, referencedTableName=video; addForeignKeyConstraint baseTableName=comment, constraintName=fk_comment__posted_by_id, referencedTableName=user_profile', '', NULL, '4.24.0', NULL, NULL, '4726848137'),
-('20240108151416-2', 'jhipster', 'config/liquibase/changelog/20240108151416_added_entity_constraints_Category.xml', TIMESTAMP '2024-01-08 10:14:08.247148', 17, 'EXECUTED', '9:b698ab70f37529158d0b5db62227f8af', 'addForeignKeyConstraint baseTableName=rel_category__videos, constraintName=fk_rel_category__videos__category_id, referencedTableName=category; addForeignKeyConstraint baseTableName=rel_category__videos, constraintName=fk_rel_category__videos__vide...', '', NULL, '4.24.0', NULL, NULL, '4726848137');       
+('20240108151416-2', 'jhipster', 'config/liquibase/changelog/20240108151416_added_entity_constraints_Category.xml', TIMESTAMP '2024-01-08 10:14:08.247148', 17, 'EXECUTED', '9:b698ab70f37529158d0b5db62227f8af', 'addForeignKeyConstraint baseTableName=rel_category__videos, constraintName=fk_rel_category__videos__category_id, referencedTableName=category; addForeignKeyConstraint baseTableName=rel_category__videos, constraintName=fk_rel_category__videos__vide...', '', NULL, '4.24.0', NULL, NULL, '4726848137');
 CREATE CACHED TABLE "PUBLIC"."DATABASECHANGELOGLOCK"(
     "ID" INTEGER NOT NULL,
     "LOCKED" BOOLEAN NOT NULL,
     "LOCKGRANTED" TIMESTAMP,
     "LOCKEDBY" CHARACTER VARYING(255)
-);          
-ALTER TABLE "PUBLIC"."DATABASECHANGELOGLOCK" ADD CONSTRAINT "PUBLIC"."PK_DATABASECHANGELOGLOCK" PRIMARY KEY("ID");             
--- 1 +/- SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK;    
+);
+ALTER TABLE "PUBLIC"."DATABASECHANGELOGLOCK" ADD CONSTRAINT "PUBLIC"."PK_DATABASECHANGELOGLOCK" PRIMARY KEY("ID");
+-- 1 +/- SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK;
 INSERT INTO "PUBLIC"."DATABASECHANGELOGLOCK" VALUES
-(1, FALSE, NULL, NULL);    
+(1, FALSE, NULL, NULL);
 CREATE CACHED TABLE "PUBLIC"."JHI_USER"(
     "ID" BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1050) DEFAULT ON NULL NOT NULL,
     "LOGIN" CHARACTER VARYING(50) NOT NULL,
@@ -65,30 +65,30 @@ CREATE CACHED TABLE "PUBLIC"."JHI_USER"(
     "RESET_DATE" TIMESTAMP,
     "LAST_MODIFIED_BY" CHARACTER VARYING(50),
     "LAST_MODIFIED_DATE" TIMESTAMP
-);         
-ALTER TABLE "PUBLIC"."JHI_USER" ADD CONSTRAINT "PUBLIC"."PK_JHI_USER" PRIMARY KEY("ID");       
--- 2 +/- SELECT COUNT(*) FROM PUBLIC.JHI_USER; 
+);
+ALTER TABLE "PUBLIC"."JHI_USER" ADD CONSTRAINT "PUBLIC"."PK_JHI_USER" PRIMARY KEY("ID");
+-- 2 +/- SELECT COUNT(*) FROM PUBLIC.JHI_USER;
 INSERT INTO "PUBLIC"."JHI_USER" VALUES
 (1, 'admin', '$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC', 'Administrator', 'Administrator', 'admin@localhost', '', TRUE, 'en', NULL, NULL, 'system', NULL, NULL, 'system', NULL),
-(2, 'user', '$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K', 'User', 'User', 'user@localhost', '', TRUE, 'en', NULL, NULL, 'system', NULL, NULL, 'system', NULL);   
+(2, 'user', '$2a$10$VEjxo0jq2YG9Rbk2HmX9S.k1uZBGYUHdUcid3g/vfiEl7lwWgOH/K', 'User', 'User', 'user@localhost', '', TRUE, 'en', NULL, NULL, 'system', NULL, NULL, 'system', NULL);
 CREATE CACHED TABLE "PUBLIC"."JHI_AUTHORITY"(
     "NAME" CHARACTER VARYING(50) NOT NULL
-);     
-ALTER TABLE "PUBLIC"."JHI_AUTHORITY" ADD CONSTRAINT "PUBLIC"."PK_JHI_AUTHORITY" PRIMARY KEY("NAME");           
--- 2 +/- SELECT COUNT(*) FROM PUBLIC.JHI_AUTHORITY;            
+);
+ALTER TABLE "PUBLIC"."JHI_AUTHORITY" ADD CONSTRAINT "PUBLIC"."PK_JHI_AUTHORITY" PRIMARY KEY("NAME");
+-- 2 +/- SELECT COUNT(*) FROM PUBLIC.JHI_AUTHORITY;
 INSERT INTO "PUBLIC"."JHI_AUTHORITY" VALUES
 ('ROLE_ADMIN'),
-('ROLE_USER');     
+('ROLE_USER');
 CREATE CACHED TABLE "PUBLIC"."JHI_USER_AUTHORITY"(
     "USER_ID" BIGINT NOT NULL,
     "AUTHORITY_NAME" CHARACTER VARYING(50) NOT NULL
-);       
-ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_E" PRIMARY KEY("USER_ID", "AUTHORITY_NAME");     
--- 3 +/- SELECT COUNT(*) FROM PUBLIC.JHI_USER_AUTHORITY;       
+);
+ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_E" PRIMARY KEY("USER_ID", "AUTHORITY_NAME");
+-- 3 +/- SELECT COUNT(*) FROM PUBLIC.JHI_USER_AUTHORITY;
 INSERT INTO "PUBLIC"."JHI_USER_AUTHORITY" VALUES
 (1, 'ROLE_ADMIN'),
 (1, 'ROLE_USER'),
-(2, 'ROLE_USER');        
+(2, 'ROLE_USER');
 CREATE CACHED TABLE "PUBLIC"."USER_PROFILE"(
     "ID" BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1500) DEFAULT ON NULL NOT NULL,
     "USER_NAME" CHARACTER VARYING(255),
@@ -96,13 +96,13 @@ CREATE CACHED TABLE "PUBLIC"."USER_PROFILE"(
     "LAST_NAME" CHARACTER VARYING(255),
     "EMAIL" CHARACTER VARYING(255),
     "PLAYLIST_ID" BIGINT
-);              
-ALTER TABLE "PUBLIC"."USER_PROFILE" ADD CONSTRAINT "PUBLIC"."PK_USER_PROFILE" PRIMARY KEY("ID");               
--- 3 +/- SELECT COUNT(*) FROM PUBLIC.USER_PROFILE;             
+);
+ALTER TABLE "PUBLIC"."USER_PROFILE" ADD CONSTRAINT "PUBLIC"."PK_USER_PROFILE" PRIMARY KEY("ID");
+-- 3 +/- SELECT COUNT(*) FROM PUBLIC.USER_PROFILE;
 INSERT INTO "PUBLIC"."USER_PROFILE" VALUES
 (1, 'Error404', 'Cesily', 'Waters', 'ceslondon96@icloud.com', 1),
 (2, 'TevTag', 'Tevin', 'Glover', 'tevwork.tg@gmail.com', 2),
-(3, 'BetaLoc', 'Loc', 'Pham', 'beta.locpham@gmail.com', 3);          
+(3, 'BetaLoc', 'Loc', 'Pham', 'beta.locpham@gmail.com', 3);
 CREATE CACHED TABLE "PUBLIC"."VIDEO"(
     "ID" BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1500 RESTART WITH 1522) DEFAULT ON NULL NOT NULL,
     "TITLE" CHARACTER VARYING(255),
@@ -114,9 +114,9 @@ CREATE CACHED TABLE "PUBLIC"."VIDEO"(
     "SEASON" INTEGER,
     "RATING" CHARACTER VARYING(255),
     "VIDEO_URL" CHARACTER VARYING(255)
-); 
-ALTER TABLE "PUBLIC"."VIDEO" ADD CONSTRAINT "PUBLIC"."PK_VIDEO" PRIMARY KEY("ID");             
--- 31 +/- SELECT COUNT(*) FROM PUBLIC.VIDEO;   
+);
+ALTER TABLE "PUBLIC"."VIDEO" ADD CONSTRAINT "PUBLIC"."PK_VIDEO" PRIMARY KEY("ID");
+-- 31 +/- SELECT COUNT(*) FROM PUBLIC.VIDEO;
 INSERT INTO "PUBLIC"."VIDEO" VALUES
 (1, 'Power', 'James "Ghost" St. Patrick, a wealthy New York nightclub owner who has it all; dreaming big, catering to the city''s elite, and living a double life as a drug kingpin.', 2014, 'TV Series', 58, 63, 6, 'TV_MA', ''),
 (2, 'Run The World', U&'The story of a group of Black women \2013 vibrant, fiercely loyal best friends \2013 who work, live and play in Harlem as they strive for world domination.', 2021, 'TV Series', 26, 16, 2, 'TV_MA', ''),
@@ -136,7 +136,7 @@ INSERT INTO "PUBLIC"."VIDEO" VALUES
 (1505, 'The Boondocks', 'Brothers Huey and Riley Freeman experience a culture clash when they leave Chicago to move in with their grandfather in the suburbs.', 2005, 'TV Series', 22, 55, 4, 'TV_MA', ''),
 (1506, 'Bluey', 'The slice-of-life adventures of an Australian Blue Heeler Cattle Dog puppy as she has fun with her family and friends in everyday situations.', 2018, 'TV Series', 7, 151, 3, 'TV_Y', 'https://nexflixclonefinal.s3.amazonaws.com/+Bluey+.mp4'),
 (1507, 'The Grim Adventures of Billy & Mandy', 'Billy''s hamster turned 10 in human years, but was awaiting to see the Grim Reaper. Billy and his friend, Mandy challenge the Reaper to a game of limbo to become best friends.', 2001, 'TV Series', 30, 84, 6, 'TV_Y7', ''),
-(1508, 'The Office ', 'A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.', 2005, 'TV Series', 22, 201, 9, 'TV_14', '');        
+(1508, 'The Office ', 'A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.', 2005, 'TV Series', 22, 201, 9, 'TV_14', '');
 INSERT INTO "PUBLIC"."VIDEO" VALUES
 (1509, 'All That', '"Saturday Night Live" for a Nickelodeon audience. A zany sketch comedy featuring many wacky characters hosted for kids and by kids.', 1994, 'TV Series', 30, 211, 11, 'G', ''),
 (1510, 'The Lion King', 'Set in a kingdom of lions in Africa, The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, Mufasa, as King of the Pride Lands.', 1994, 'Movie', 88, 0, 0, 'G', ''),
@@ -149,11 +149,11 @@ INSERT INTO "PUBLIC"."VIDEO" VALUES
 (1518, 'Shrek', 'A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.', 2001, 'Movie', 90, 0, 0, 'PG', ''),
 (1519, 'Thor: Ragnarok', U&'Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnar\00f6k, the destruction of his world, at the hands of the powerful and ruthless villain Hela.', 2017, 'Movie', 130, 0, 0, 'PG13', ''),
 (1520, 'The Fast and the Furious: Tokyo Drift ', 'A teenager becomes a major competitor in the world of drift racing after moving in with his father in Tokyo to avoid a jail sentence in America.', 2006, 'Movie', 104, 0, 0, 'PG13', ''),
-(1521, 'Joker', 'During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.', 2019, 'Movie', 122, 0, 0, 'R', '');               
+(1521, 'Joker', 'During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.', 2019, 'Movie', 122, 0, 0, 'R', '');
 CREATE CACHED TABLE "PUBLIC"."PLAYLIST" COMMENT 'not an ignored comment'(
     "ID" BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1500) DEFAULT ON NULL NOT NULL
-);        
-ALTER TABLE "PUBLIC"."PLAYLIST" ADD CONSTRAINT "PUBLIC"."PK_PLAYLIST" PRIMARY KEY("ID");       
+);
+ALTER TABLE "PUBLIC"."PLAYLIST" ADD CONSTRAINT "PUBLIC"."PK_PLAYLIST" PRIMARY KEY("ID");
 -- 10 +/- SELECT COUNT(*) FROM PUBLIC.PLAYLIST;
 INSERT INTO "PUBLIC"."PLAYLIST" VALUES
 (1),
@@ -165,22 +165,22 @@ INSERT INTO "PUBLIC"."PLAYLIST" VALUES
 (7),
 (8),
 (9),
-(10);      
+(10);
 CREATE CACHED TABLE "PUBLIC"."REL_PLAYLIST__VIDEOS"(
     "VIDEOS_ID" BIGINT NOT NULL,
     "PLAYLIST_ID" BIGINT NOT NULL
-);     
-ALTER TABLE "PUBLIC"."REL_PLAYLIST__VIDEOS" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_B" PRIMARY KEY("PLAYLIST_ID", "VIDEOS_ID");    
--- 0 +/- SELECT COUNT(*) FROM PUBLIC.REL_PLAYLIST__VIDEOS;     
+);
+ALTER TABLE "PUBLIC"."REL_PLAYLIST__VIDEOS" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_B" PRIMARY KEY("PLAYLIST_ID", "VIDEOS_ID");
+-- 0 +/- SELECT COUNT(*) FROM PUBLIC.REL_PLAYLIST__VIDEOS;
 CREATE CACHED TABLE "PUBLIC"."COMMENT"(
     "ID" BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1500 RESTART WITH 1511) DEFAULT ON NULL NOT NULL,
     "POST" CHARACTER VARYING(255),
     "THUMBS_UP" INTEGER,
     "VIDEO_ID" BIGINT,
     "POSTED_BY_ID" BIGINT
-);          
-ALTER TABLE "PUBLIC"."COMMENT" ADD CONSTRAINT "PUBLIC"."PK_COMMENT" PRIMARY KEY("ID");         
--- 21 +/- SELECT COUNT(*) FROM PUBLIC.COMMENT; 
+);
+ALTER TABLE "PUBLIC"."COMMENT" ADD CONSTRAINT "PUBLIC"."PK_COMMENT" PRIMARY KEY("ID");
+-- 21 +/- SELECT COUNT(*) FROM PUBLIC.COMMENT;
 INSERT INTO "PUBLIC"."COMMENT" VALUES
 (1, 'I wish the Southern Classic was still around! It''s also cool that 02'' alumni can say they were in this movie. ', NULL, 8, 1),
 (2, 'Stop the Rose hate. The door couldn''t fit the both of them, it would''ve sunk with both of them on there.', NULL, 7, 1),
@@ -202,12 +202,12 @@ INSERT INTO "PUBLIC"."COMMENT" VALUES
 (1507, U&'I don\2019t got friends. I got FAMILY', NULL, 1520, 3),
 (1508, 'Fifty percent of something is better than a hundred percent of nothing.', NULL, 1520, 1),
 (1509, 'My mind has been boggled', NULL, 1521, 3),
-(1510, 'Imagine someone walking around your city with a painted face causing terror, lawd! I thought clowns were bad but I guess jokers are worse', NULL, 1521, 1);            
+(1510, 'Imagine someone walking around your city with a painted face causing terror, lawd! I thought clowns were bad but I guess jokers are worse', NULL, 1521, 1);
 CREATE CACHED TABLE "PUBLIC"."CATEGORY" COMMENT 'Task entity.\n@author The JHipster team.'(
     "ID" BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1500 RESTART WITH 1514) DEFAULT ON NULL NOT NULL,
     "CATEGORY_NAME" CHARACTER VARYING(255)
-);        
-ALTER TABLE "PUBLIC"."CATEGORY" ADD CONSTRAINT "PUBLIC"."PK_CATEGORY" PRIMARY KEY("ID");       
+);
+ALTER TABLE "PUBLIC"."CATEGORY" ADD CONSTRAINT "PUBLIC"."PK_CATEGORY" PRIMARY KEY("ID");
 -- 15 +/- SELECT COUNT(*) FROM PUBLIC.CATEGORY;
 INSERT INTO "PUBLIC"."CATEGORY" VALUES
 (1, 'Action'),
@@ -224,13 +224,13 @@ INSERT INTO "PUBLIC"."CATEGORY" VALUES
 (1507, 'Music'),
 (1511, 'Family'),
 (1512, 'Sport'),
-(1513, 'Biography ');    
+(1513, 'Biography ');
 CREATE CACHED TABLE "PUBLIC"."REL_CATEGORY__VIDEOS"(
     "VIDEOS_ID" BIGINT NOT NULL,
     "CATEGORY_ID" BIGINT NOT NULL
-);     
-ALTER TABLE "PUBLIC"."REL_CATEGORY__VIDEOS" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_D" PRIMARY KEY("CATEGORY_ID", "VIDEOS_ID");    
--- 105 +/- SELECT COUNT(*) FROM PUBLIC.REL_CATEGORY__VIDEOS;   
+);
+ALTER TABLE "PUBLIC"."REL_CATEGORY__VIDEOS" ADD CONSTRAINT "PUBLIC"."CONSTRAINT_D" PRIMARY KEY("CATEGORY_ID", "VIDEOS_ID");
+-- 105 +/- SELECT COUNT(*) FROM PUBLIC.REL_CATEGORY__VIDEOS;
 INSERT INTO "PUBLIC"."REL_CATEGORY__VIDEOS" VALUES
 (1, 1500),
 (5, 1),
@@ -336,16 +336,16 @@ INSERT INTO "PUBLIC"."REL_CATEGORY__VIDEOS" VALUES
 (1512, 1511),
 (1518, 1511),
 (5, 1512),
-(1501, 1513);         
-ALTER TABLE "PUBLIC"."JHI_USER" ADD CONSTRAINT "PUBLIC"."UX_USER_LOGIN" UNIQUE("LOGIN");       
-ALTER TABLE "PUBLIC"."JHI_USER" ADD CONSTRAINT "PUBLIC"."UX_USER_EMAIL" UNIQUE("EMAIL");       
-ALTER TABLE "PUBLIC"."USER_PROFILE" ADD CONSTRAINT "PUBLIC"."UX_USER_PROFILE__PLAYLIST_ID" UNIQUE("PLAYLIST_ID");              
-ALTER TABLE "PUBLIC"."COMMENT" ADD CONSTRAINT "PUBLIC"."FK_COMMENT__VIDEO_ID" FOREIGN KEY("VIDEO_ID") REFERENCES "PUBLIC"."VIDEO"("ID") NOCHECK;               
-ALTER TABLE "PUBLIC"."REL_CATEGORY__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_CATEGORY__VIDEOS__CATEGORY_ID" FOREIGN KEY("CATEGORY_ID") REFERENCES "PUBLIC"."CATEGORY"("ID") NOCHECK;            
-ALTER TABLE "PUBLIC"."REL_PLAYLIST__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_PLAYLIST__VIDEOS__VIDEOS_ID" FOREIGN KEY("VIDEOS_ID") REFERENCES "PUBLIC"."VIDEO"("ID") NOCHECK;   
-ALTER TABLE "PUBLIC"."REL_PLAYLIST__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_PLAYLIST__VIDEOS__PLAYLIST_ID" FOREIGN KEY("PLAYLIST_ID") REFERENCES "PUBLIC"."PLAYLIST"("ID") NOCHECK;            
-ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."FK_USER_ID" FOREIGN KEY("USER_ID") REFERENCES "PUBLIC"."JHI_USER"("ID") NOCHECK;            
-ALTER TABLE "PUBLIC"."REL_CATEGORY__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_CATEGORY__VIDEOS__VIDEOS_ID" FOREIGN KEY("VIDEOS_ID") REFERENCES "PUBLIC"."VIDEO"("ID") NOCHECK;   
-ALTER TABLE "PUBLIC"."USER_PROFILE" ADD CONSTRAINT "PUBLIC"."FK_USER_PROFILE__PLAYLIST_ID" FOREIGN KEY("PLAYLIST_ID") REFERENCES "PUBLIC"."PLAYLIST"("ID") NOCHECK;            
+(1501, 1513);
+ALTER TABLE "PUBLIC"."JHI_USER" ADD CONSTRAINT "PUBLIC"."UX_USER_LOGIN" UNIQUE("LOGIN");
+ALTER TABLE "PUBLIC"."JHI_USER" ADD CONSTRAINT "PUBLIC"."UX_USER_EMAIL" UNIQUE("EMAIL");
+ALTER TABLE "PUBLIC"."USER_PROFILE" ADD CONSTRAINT "PUBLIC"."UX_USER_PROFILE__PLAYLIST_ID" UNIQUE("PLAYLIST_ID");
+ALTER TABLE "PUBLIC"."COMMENT" ADD CONSTRAINT "PUBLIC"."FK_COMMENT__VIDEO_ID" FOREIGN KEY("VIDEO_ID") REFERENCES "PUBLIC"."VIDEO"("ID") NOCHECK;
+ALTER TABLE "PUBLIC"."REL_CATEGORY__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_CATEGORY__VIDEOS__CATEGORY_ID" FOREIGN KEY("CATEGORY_ID") REFERENCES "PUBLIC"."CATEGORY"("ID") NOCHECK;
+ALTER TABLE "PUBLIC"."REL_PLAYLIST__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_PLAYLIST__VIDEOS__VIDEOS_ID" FOREIGN KEY("VIDEOS_ID") REFERENCES "PUBLIC"."VIDEO"("ID") NOCHECK;
+ALTER TABLE "PUBLIC"."REL_PLAYLIST__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_PLAYLIST__VIDEOS__PLAYLIST_ID" FOREIGN KEY("PLAYLIST_ID") REFERENCES "PUBLIC"."PLAYLIST"("ID") NOCHECK;
+ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."FK_USER_ID" FOREIGN KEY("USER_ID") REFERENCES "PUBLIC"."JHI_USER"("ID") NOCHECK;
+ALTER TABLE "PUBLIC"."REL_CATEGORY__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_CATEGORY__VIDEOS__VIDEOS_ID" FOREIGN KEY("VIDEOS_ID") REFERENCES "PUBLIC"."VIDEO"("ID") NOCHECK;
+ALTER TABLE "PUBLIC"."USER_PROFILE" ADD CONSTRAINT "PUBLIC"."FK_USER_PROFILE__PLAYLIST_ID" FOREIGN KEY("PLAYLIST_ID") REFERENCES "PUBLIC"."PLAYLIST"("ID") NOCHECK;
 ALTER TABLE "PUBLIC"."COMMENT" ADD CONSTRAINT "PUBLIC"."FK_COMMENT__POSTED_BY_ID" FOREIGN KEY("POSTED_BY_ID") REFERENCES "PUBLIC"."USER_PROFILE"("ID") NOCHECK;
-ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."FK_AUTHORITY_NAME" FOREIGN KEY("AUTHORITY_NAME") REFERENCES "PUBLIC"."JHI_AUTHORITY"("NAME") NOCHECK;       
+ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."FK_AUTHORITY_NAME" FOREIGN KEY("AUTHORITY_NAME") REFERENCES "PUBLIC"."JHI_AUTHORITY"("NAME") NOCHECK;
