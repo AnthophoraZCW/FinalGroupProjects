@@ -1,3 +1,26 @@
 *{
   margin: 0;
 }
+.header-container {
+  display: flex;        /* Use flexbox */
+  align-items: center;  /* Align items vertically in the center */
+  justify-content: space-evenly; /* Space between header and image */
+  color: #d84c4c;       /* Change text color */
+  font-family: Arial, sans-serif;
+}
+
+.header-container img {
+  width: 150px;  /* Adjust the width as needed */
+  height: auto;  /* Maintain aspect ratio */
+  border: 3px solid black; /* Adjust the border thickness and color as needed */
+  border-radius: 5px; /* Optional, for rounded corners */
+
+}
+
+.icon_container img{
+  width: 40px;  /* Adjust the width as needed */
+  height: auto;  /* Maintain aspect ratio */
+  border: 2px solid black; /* Adjust the border thickness and color as needed */
+  border-radius: 5px; /* Optional, for rounded corners */
+
+}

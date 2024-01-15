@@ -21,29 +21,28 @@ function AppUser(){
     <>
     <div className ="AppUser">
       {/* <Navi/> */}
-      <Banner/>
-      <h1>
+      {/* <Banner/> */}
+      <div className='header-container'>
+      <h1 style={{ fontSize: '100px' }}>
         Welcome to VLA
       </h1>
-      <h2> 
-        
-      </h2>
-      {/* <Row categoryTitle = "All Films" fetchUrl={requests.fetchAll} /> */}
+      <img src="/content/images/VLALogo.png" alt="Logo" />
+      </div>
       <Row categoryTitle = "Action" fetchUrl={requests.fetchAction} />
       <Row categoryTitle = "Romance" fetchUrl={requests.fetchRomance}/>
       <Row categoryTitle = "Comedy" fetchUrl={requests.fetchComedy}/>
-      <Row categoryTitle = "Fantasy" fetchUrl={requests.fetchAction} />
-      <Row categoryTitle = "Animation" fetchUrl={requests.fetchRomance}/>
-      <Row categoryTitle = "Horror" fetchUrl={requests.fetchComedy}/>
-      <Row categoryTitle = "Sci-Fi" fetchUrl={requests.fetchAction} />
-      <Row categoryTitle = "Drama" fetchUrl={requests.fetchRomance}/>
-      <Row categoryTitle = "Adventure" fetchUrl={requests.fetchComedy}/>
-      <Row categoryTitle = "Crime" fetchUrl={requests.fetchAction} />
-      <Row categoryTitle = "Thriller" fetchUrl={requests.fetchRomance}/>
-      <Row categoryTitle = "Music" fetchUrl={requests.fetchComedy}/>
-      <Row categoryTitle = "Family" fetchUrl={requests.fetchAction} />
-      <Row categoryTitle = "Sports" fetchUrl={requests.fetchRomance}/>
-      <Row categoryTitle = "Biography" fetchUrl={requests.fetchComedy}/>
+      <Row categoryTitle = "Fantasy" fetchUrl={requests.fetchFantasy} />
+      <Row categoryTitle = "Animation" fetchUrl={requests.fetchAnimation}/>
+      <Row categoryTitle = "Horror" fetchUrl={requests.fetchHorror}/>
+      <Row categoryTitle = "Sci-Fi" fetchUrl={requests.fetchSciFi} />
+      <Row categoryTitle = "Drama" fetchUrl={requests.fetchDrama}/>
+      <Row categoryTitle = "Adventure" fetchUrl={requests.fetchAdventure}/>
+      <Row categoryTitle = "Crime" fetchUrl={requests.fetchCrime} />
+      <Row categoryTitle = "Thriller" fetchUrl={requests.fetchThriller}/>
+      <Row categoryTitle = "Music" fetchUrl={requests.fetchMusic}/>
+      <Row categoryTitle = "Family" fetchUrl={requests.fetchFamily} />
+      <Row categoryTitle = "Sports" fetchUrl={requests.fetchSport}/>
+      <Row categoryTitle = "Biography" fetchUrl={requests.fetchBio}/>
     </div>
     </>
   );

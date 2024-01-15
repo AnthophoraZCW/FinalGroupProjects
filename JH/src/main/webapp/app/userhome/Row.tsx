@@ -32,7 +32,7 @@ function Row( {categoryTitle, fetchUrl} ) {
   return(
     <div className = "row">
       {/*   title */}
-      <h2>{categoryTitle}</h2>
+      <h2 className='title_style'>{categoryTitle}</h2>
       <div className="row_images">
         {videos.map(video => (
           // <Button tag={Link} to='/video/${video.id}'/>
