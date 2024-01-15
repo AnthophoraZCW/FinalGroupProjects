@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Button, Row, Col } from 'reactstrap';
 import { Translate } from 'react-jhipster';
@@ -7,17 +7,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 import { getEntity } from './video.reducer';
+import axios from "axios";
 
 export const VideoDetail = () => {
   const dispatch = useAppDispatch();
 
+  const videoEntity = useAppSelector(state => state.video.entity);
+  const [url,setUrl]= useState("");
+
   const { id } = useParams<'id'>();
 
   useEffect(() => {
-    dispatch(getEntity(id));
+    const fetchEnitiy = async () => {
+     try{
+       // dispatch(getEntity(id));
+       const response = await
+         axios.get("http://localhost:8080/api/videos/" + id)
+       setUrl(response.data.videoURL);
+     } catch (e){
+       console.error(" error fetching ", e);
+     }
+    }
+  fetchEnitiy();
   }, []);
 
-  const videoEntity = useAppSelector(state => state.video.entity);
+console.log(url);
   return (
     <Row>
       <Col md="8">
@@ -79,15 +93,18 @@ export const VideoDetail = () => {
             </span>
           </dt>
           <dd>{videoEntity.rating}</dd>
-          <dt>
-            <span id="videoURL">
-              <Translate contentKey="jhApp.video.videoURL">Video URL</Translate>
-            </span>
-          </dt>
-          <dd>{videoEntity.videoURL}</dd>
-        </dl>
-        <Button tag={Link} to="/video" replace color="info" data-cy="entityDetailsBackButton">
-          <FontAwesomeIcon icon="arrow-left" />{' '}
+          {url && (
+
+          <video height="640" width="720" controls>
+            <source src={url} type="video/mp4"/>
+          </video>
+
+        )}
+
+
+      </dl>
+      <Button tag={Link} to="/video" replace color="info" data-cy="entityDetailsBackButton">
+        <FontAwesomeIcon icon="arrow-left" />{' '}
           <span className="d-none d-md-inline">
             <Translate contentKey="entity.action.back">Back</Translate>
           </span>

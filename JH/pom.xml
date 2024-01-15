@@ -64,7 +64,7 @@
         <maven-site-plugin.version>3.12.1</maven-site-plugin.version>
         <maven-surefire-plugin.version>3.2.2</maven-surefire-plugin.version>
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
-        <modernizer-maven-plugin.version>2.7.0</modernizer-maven-plugin.version>
+        <modernizer-maven-plugin.version>2.6.0</modernizer-maven-plugin.version>
         <nohttp-checkstyle.version>0.0.11</nohttp-checkstyle.version>
         <profile.api-docs/>
         <profile.e2e/>
@@ -541,7 +541,7 @@
                     <version>${maven-eclipse-plugin.version}</version>
                     <configuration>
                         <downloadSources>true</downloadSources>
-                        <downloadJavadocs>true</downloadJavadocs>
+<!--                        <downloadJavadocs>true</downloadJavadocs>-->
                     </configuration>
                 </plugin>
                 <plugin>
@@ -801,11 +801,11 @@
                             <artifactId>liquibase-core</artifactId>
                             <version>${liquibase.version}</version>
                         </dependency>
-                        <dependency>
-                            <groupId>org.liquibase.ext</groupId>
-                            <artifactId>liquibase-hibernate6</artifactId>
-                            <version>${liquibase.version}</version>
-                        </dependency>
+<!--                        <dependency>-->
+<!--                            <groupId>org.liquibase.ext</groupId>-->
+<!--                            <artifactId>liquibase-hibernate6</artifactId>-->
+<!--                            <version>${liquibase.version}</version>-->
+<!--                        </dependency>-->
                         <dependency>
                             <groupId>org.springframework.boot</groupId>
                             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -1055,10 +1055,10 @@
                 </plugins>
             </build>
             <dependencies>
-                <dependency>
-                    <groupId>com.mysql</groupId>
-                    <artifactId>mysql-connector-j</artifactId>
-                </dependency>
+<!--                <dependency>-->
+<!--                    <groupId>com.mysql</groupId>-->
+<!--                    <artifactId>mysql-connector-j</artifactId>-->
+<!--                </dependency>-->
             </dependencies>
         </profile>
         <profile>
