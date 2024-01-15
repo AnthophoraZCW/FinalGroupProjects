@@ -1,0 +1,15 @@
+{
+  "appuserhome": {
+    "title": "Welcome to VLA",
+    "subtitle": "Homepage",
+    "logged": {
+      "message": "You are logged in as user \"{{username}}\"."
+    },
+    "question": "QUESTIONS??",
+    "link": {
+      "homepage": "AppUser HomePage"
+    },
+    "like": "If you like JHipster, don't forget to give us a star on",
+    "github": "GitHub"
+  }
+}

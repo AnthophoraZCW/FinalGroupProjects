@@ -161,6 +161,13 @@ export const VideoUpdate = () => {
                 data-cy="videoURL"
                 type="text"
               />
+              <ValidatedField
+                label={translate('jhApp.video.imageURL')}
+                id="video-imageURL"
+                name="imageURL"
+                data-cy="imageURL"
+                type="text"
+              />
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/video" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

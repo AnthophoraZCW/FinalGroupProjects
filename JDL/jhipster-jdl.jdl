@@ -16,6 +16,7 @@ entity Video {
     season Integer
     rating Rating
     videoURL String
+    imageURL String
 }
 
 // an ignored comment
