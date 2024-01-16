@@ -148,7 +148,7 @@ spring:
       # allows localhost:9000/userhome to access the API, delete if needed
       # add more origins separated by comma if needed
       cors:
-      allowed-origins: http://localhost:9000/userhome
+      allowed-origins: http://localhost:9000/*
       allowed-methods: GET, POST, PUT, DELETE, OPTIONS
   task:
     execution:

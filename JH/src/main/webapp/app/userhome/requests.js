@@ -16,6 +16,8 @@ const requests =
     fetchFamily: '/api/categories/1511',
     fetchSport: '/api/categories/1512',
     fetchBio: '/api/categories/1513',
+    fetchComments: '/api/comments',
+    fetchUser: '/api/user-profiles',
   }
 
   export default requests;

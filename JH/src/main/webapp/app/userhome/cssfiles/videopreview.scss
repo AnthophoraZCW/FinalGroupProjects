@@ -59,6 +59,17 @@ body {
     font-weight:light;
     text-align: flex-start;
   }
+  .video-comments {
+    margin: 20px 0;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight:light;
+    text-align: flex-start;
+    display: flex;
+    background-color: rgba(48, 47, 47, 0.83);
+    background-size: auto;
+  }
 
   .play-button {
     font-size: 18px;

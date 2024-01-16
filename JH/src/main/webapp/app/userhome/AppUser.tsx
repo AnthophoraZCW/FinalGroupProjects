@@ -14,7 +14,12 @@ function AppUser(){
   const navigate = useNavigate();
   const routeToUserHome = () => {
     const path = `/userhome`;
-    navigate(path);
+    try{
+      navigate(path);
+    }
+    catch(err){
+      console.log(err);
+    }
   }
   routeToUserHome();
   return(
