@@ -42,6 +42,10 @@
     {
       "fieldName": "videoURL",
       "fieldType": "String"
+    },
+    {
+      "fieldName": "imageURL",
+      "fieldType": "String"
     }
   ],
   "name": "Video",

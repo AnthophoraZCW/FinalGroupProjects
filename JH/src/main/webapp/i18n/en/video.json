@@ -27,6 +27,7 @@
       "season": "Season",
       "rating": "Rating",
       "videoURL": "Video URL",
+      "imageURL": "Image URL",
       "comments": "Comments",
       "categories": "Categories",
       "playlist": "Playlist"

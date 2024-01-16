@@ -113,43 +113,44 @@ CREATE CACHED TABLE "PUBLIC"."VIDEO"(
     "EPISODE" INTEGER,
     "SEASON" INTEGER,
     "RATING" CHARACTER VARYING(255),
-    "VIDEO_URL" CHARACTER VARYING(255)
+    "VIDEO_URL" CHARACTER VARYING(255),
+    "IMAGE_URL" CHARACTER VARYING(255)
 );
 ALTER TABLE "PUBLIC"."VIDEO" ADD CONSTRAINT "PUBLIC"."PK_VIDEO" PRIMARY KEY("ID");
 -- 31 +/- SELECT COUNT(*) FROM PUBLIC.VIDEO;
 INSERT INTO "PUBLIC"."VIDEO" VALUES
-(1, 'Power', 'James "Ghost" St. Patrick, a wealthy New York nightclub owner who has it all; dreaming big, catering to the city''s elite, and living a double life as a drug kingpin.', 2014, 'TV Series', 58, 63, 6, 'TV_MA', ''),
-(2, 'Run The World', U&'The story of a group of Black women \2013 vibrant, fiercely loyal best friends \2013 who work, live and play in Harlem as they strive for world domination.', 2021, 'TV Series', 26, 16, 2, 'TV_MA', ''),
-(3, 'Courage The Cowardly Dog', 'A cowardly dog who must overcome his own fears to heroically defend his unknowing farmer owners from all kinds of dangers, paranormal events and menaces that appear around their land.', 1999, 'TV Series', 22, 52, 4, 'TV_Y7', ''),
-(4, 'Kenan & Kel', 'Kenan and Kel: two best friends who live in Chicago are always dragged down by Kenan''s get rich quick schemes while orange soda-loving buddy Kel is dragged along but tends to mess things up.', 1996, 'TV Series', 24, 65, 4, 'G', ''),
-(5, 'Baki', 'The protagonist, Baki Hanma, trains with an intense focus to become strong enough to surpass his father, Yujiro Hanma, the strongest fighter in the world.', 2018, 'TV Series', 43, 39, 2, 'TV_MA', ''),
-(6, 'The Walking Dead', 'Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.', 2010, 'TV Series', 44, 177, 11, 'TV_MA', ''),
-(7, 'Titanic ', 'A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.', 1996, 'Movie', 195, 0, 0, 'PG13', ''),
-(8, 'Drumline', 'A band director recruits an ego driven Harlem drummer to play at a Southern university.', 2002, 'Movie', 120, 0, 0, 'PG13', ''),
-(9, 'Law Abiding Citizen', 'A frustrated man decides to take justice into his own hands after a plea bargain sets one of his family''s killers free.', 2009, 'Movie', 118, 0, 0, 'R', ''),
-(10, 'Toy Story ', 'A cowboy doll is profoundly threatened and jealous when a new spaceman action figure supplants him as top toy in a boy''s bedroom.', 1995, 'Movie', 81, 0, 0, 'G', ''),
-(1500, 'The Santa Claus 3: The Escape Clause', 'Santa, a.k.a. Scott Calvin, is faced with double-duty: how to keep his new family happy and how to stop Jack Frost from taking over Christmas.', 2006, 'Movie', 92, 0, 0, 'G', ''),
-(1501, 'The Wolf of Wall Street ', 'Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.', 2013, 'Movie', 0, 0, 0, 'R', ''),
-(1502, 'IT ', 'Set in Derry, Maine. The film tells the story of The Losers'' Club , a group of seven outcast children who are terrorized by the eponymous being which emerges from the sewer , only to face their own personal demons in the process.', 2017, 'Movie', 135, 0, 0, 'R', ''),
-(1503, 'The Boondock Saints', 'Two Irish Catholic brothers become vigilantes and wipe out Boston''s criminal underworld in the name of God. ', 1999, 'Movie', 108, 0, 0, 'R', ''),
-(1504, 'Baby Boy', 'The story of Jody, a misguided, 20-year-old African-American who is really just a baby boy finally forced-kicking and screaming to face the commitments of real life.', 2001, 'Movie', 130, 0, 0, 'R', ''),
-(1505, 'The Boondocks', 'Brothers Huey and Riley Freeman experience a culture clash when they leave Chicago to move in with their grandfather in the suburbs.', 2005, 'TV Series', 22, 55, 4, 'TV_MA', ''),
-(1506, 'Bluey', 'The slice-of-life adventures of an Australian Blue Heeler Cattle Dog puppy as she has fun with her family and friends in everyday situations.', 2018, 'TV Series', 7, 151, 3, 'TV_Y', 'https://nexflixclonefinal.s3.amazonaws.com/+Bluey+.mp4'),
-(1507, 'The Grim Adventures of Billy & Mandy', 'Billy''s hamster turned 10 in human years, but was awaiting to see the Grim Reaper. Billy and his friend, Mandy challenge the Reaper to a game of limbo to become best friends.', 2001, 'TV Series', 30, 84, 6, 'TV_Y7', ''),
-(1508, 'The Office ', 'A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.', 2005, 'TV Series', 22, 201, 9, 'TV_14', '');
+(1, 'Power', 'James "Ghost" St. Patrick, a wealthy New York nightclub owner who has it all; dreaming big, catering to the city''s elite, and living a double life as a drug kingpin.', 2014, 'TV Series', 58, 63, 6, 'TV_MA', '', ''),
+(2, 'Run The World', U&'The story of a group of Black women \2013 vibrant, fiercely loyal best friends \2013 who work, live and play in Harlem as they strive for world domination.', 2021, 'TV Series', 26, 16, 2, 'TV_MA', '', ''),
+(3, 'Courage The Cowardly Dog', 'A cowardly dog who must overcome his own fears to heroically defend his unknowing farmer owners from all kinds of dangers, paranormal events and menaces that appear around their land.', 1999, 'TV Series', 22, 52, 4, 'TV_Y7', '', ''),
+(4, 'Kenan & Kel', 'Kenan and Kel: two best friends who live in Chicago are always dragged down by Kenan''s get rich quick schemes while orange soda-loving buddy Kel is dragged along but tends to mess things up.', 1996, 'TV Series', 24, 65, 4, 'G', '', ''),
+(5, 'Baki', 'The protagonist, Baki Hanma, trains with an intense focus to become strong enough to surpass his father, Yujiro Hanma, the strongest fighter in the world.', 2018, 'TV Series', 43, 39, 2, 'TV_MA', '', ''),
+(6, 'The Walking Dead', 'Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.', 2010, 'TV Series', 44, 177, 11, 'TV_MA', '', ''),
+(7, 'Titanic ', 'A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.', 1996, 'Movie', 195, 0, 0, 'PG13', '', ''),
+(8, 'Drumline', 'A band director recruits an ego driven Harlem drummer to play at a Southern university.', 2002, 'Movie', 120, 0, 0, 'PG13', '', ''),
+(9, 'Law Abiding Citizen', 'A frustrated man decides to take justice into his own hands after a plea bargain sets one of his family''s killers free.', 2009, 'Movie', 118, 0, 0, 'R', '', ''),
+(10, 'Toy Story ', 'A cowboy doll is profoundly threatened and jealous when a new spaceman action figure supplants him as top toy in a boy''s bedroom.', 1995, 'Movie', 81, 0, 0, 'G', '', ''),
+(1500, 'The Santa Claus 3: The Escape Clause', 'Santa, a.k.a. Scott Calvin, is faced with double-duty: how to keep his new family happy and how to stop Jack Frost from taking over Christmas.', 2006, 'Movie', 92, 0, 0, 'G', '', ''),
+(1501, 'The Wolf of Wall Street ', 'Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.', 2013, 'Movie', 0, 0, 0, 'R', '', ''),
+(1502, 'IT ', 'Set in Derry, Maine. The film tells the story of The Losers'' Club , a group of seven outcast children who are terrorized by the eponymous being which emerges from the sewer , only to face their own personal demons in the process.', 2017, 'Movie', 135, 0, 0, 'R', '', ''),
+(1503, 'The Boondock Saints', 'Two Irish Catholic brothers become vigilantes and wipe out Boston''s criminal underworld in the name of God. ', 1999, 'Movie', 108, 0, 0, 'R', '', ''),
+(1504, 'Baby Boy', 'The story of Jody, a misguided, 20-year-old African-American who is really just a baby boy finally forced-kicking and screaming to face the commitments of real life.', 2001, 'Movie', 130, 0, 0, 'R', '', ''),
+(1505, 'The Boondocks', 'Brothers Huey and Riley Freeman experience a culture clash when they leave Chicago to move in with their grandfather in the suburbs.', 2005, 'TV Series', 22, 55, 4, 'TV_MA', '', ''),
+(1506, 'Bluey', 'The slice-of-life adventures of an Australian Blue Heeler Cattle Dog puppy as she has fun with her family and friends in everyday situations.', 2018, 'TV Series', 7, 151, 3, 'TV_Y', 'https://nexflixclonefinal.s3.amazonaws.com/+Bluey+.mp4',''),
+(1507, 'The Grim Adventures of Billy & Mandy', 'Billy''s hamster turned 10 in human years, but was awaiting to see the Grim Reaper. Billy and his friend, Mandy challenge the Reaper to a game of limbo to become best friends.', 2001, 'TV Series', 30, 84, 6, 'TV_Y7', '',''),
+(1508, 'The Office ', 'A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium.', 2005, 'TV Series', 22, 201, 9, 'TV_14', '', '');
 INSERT INTO "PUBLIC"."VIDEO" VALUES
-(1509, 'All That', '"Saturday Night Live" for a Nickelodeon audience. A zany sketch comedy featuring many wacky characters hosted for kids and by kids.', 1994, 'TV Series', 30, 211, 11, 'G', ''),
-(1510, 'The Lion King', 'Set in a kingdom of lions in Africa, The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, Mufasa, as King of the Pride Lands.', 1994, 'Movie', 88, 0, 0, 'G', ''),
-(1511, 'The Land Before Time', 'An orphaned brontosaurus teams up with other young dinosaurs in order to reunite with their families in a valley.', 1988, 'Movie', 69, 0, 0, 'G', ''),
-(1512, 'SpongeBob SquarePants', 'The misadventures of a talking sea sponge who works at a fast food restaurant, attends a boating school, and lives in an underwater pineapple.', 1999, 'TV Series', 23, 296, 14, 'TV_Y7', ''),
-(1513, 'Breaking Bad', 'A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student in order to secure his family''s future.', 2008, 'TV Series', 58, 62, 5, 'TV_MA', ''),
-(1514, 'Silicon Valley', 'Follows the struggle of Richard Hendricks, a Silicon Valley engineer trying to build his own company called Pied Piper.', 2014, 'TV Series', 28, 53, 6, 'TV_MA', ''),
-(1515, 'My Hero Academia', 'A superhero-admiring boy enrolls in a prestigious hero academy and learns what it really means to be a hero, after the strongest superhero grants him his own powers.', 2016, 'TV Series', 24, 113, 6, 'TV_14', ''),
-(1517, 'Key and Peele', 'Project sees Keegan-Michael Key and Jordan Peele in front of a live studio audience bantering about a topic weaved between filmed shorts and sketches.', 2012, 'TV Series', 30, 53, 5, 'TV_14', ''),
-(1518, 'Shrek', 'A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.', 2001, 'Movie', 90, 0, 0, 'PG', ''),
-(1519, 'Thor: Ragnarok', U&'Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnar\00f6k, the destruction of his world, at the hands of the powerful and ruthless villain Hela.', 2017, 'Movie', 130, 0, 0, 'PG13', ''),
-(1520, 'The Fast and the Furious: Tokyo Drift ', 'A teenager becomes a major competitor in the world of drift racing after moving in with his father in Tokyo to avoid a jail sentence in America.', 2006, 'Movie', 104, 0, 0, 'PG13', ''),
-(1521, 'Joker', 'During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.', 2019, 'Movie', 122, 0, 0, 'R', '');
+(1509, 'All That', '"Saturday Night Live" for a Nickelodeon audience. A zany sketch comedy featuring many wacky characters hosted for kids and by kids.', 1994, 'TV Series', 30, 211, 11, 'G', '', ''),
+(1510, 'The Lion King', 'Set in a kingdom of lions in Africa, The Lion King tells the story of Simba (Swahili for lion), a lion cub who is to succeed his father, Mufasa, as King of the Pride Lands.', 1994, 'Movie', 88, 0, 0, 'G', '', ''),
+(1511, 'The Land Before Time', 'An orphaned brontosaurus teams up with other young dinosaurs in order to reunite with their families in a valley.', 1988, 'Movie', 69, 0, 0, 'G', '', ''),
+(1512, 'SpongeBob SquarePants', 'The misadventures of a talking sea sponge who works at a fast food restaurant, attends a boating school, and lives in an underwater pineapple.', 1999, 'TV Series', 23, 296, 14, 'TV_Y7', '', ''),
+(1513, 'Breaking Bad', 'A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student in order to secure his family''s future.', 2008, 'TV Series', 58, 62, 5, 'TV_MA', '', ''),
+(1514, 'Silicon Valley', 'Follows the struggle of Richard Hendricks, a Silicon Valley engineer trying to build his own company called Pied Piper.', 2014, 'TV Series', 28, 53, 6, 'TV_MA', '', ''),
+(1515, 'My Hero Academia', 'A superhero-admiring boy enrolls in a prestigious hero academy and learns what it really means to be a hero, after the strongest superhero grants him his own powers.', 2016, 'TV Series', 24, 113, 6, 'TV_14', '', ''),
+(1517, 'Key and Peele', 'Project sees Keegan-Michael Key and Jordan Peele in front of a live studio audience bantering about a topic weaved between filmed shorts and sketches.', 2012, 'TV Series', 30, 53, 5, 'TV_14', '', ''),
+(1518, 'Shrek', 'A mean lord exiles fairytale creatures to the swamp of a grumpy ogre, who must go on a quest and rescue a princess for the lord in order to get his land back.', 2001, 'Movie', 90, 0, 0, 'PG', '', ''),
+(1519, 'Thor: Ragnarok', U&'Imprisoned on the planet Sakaar, Thor must race against time to return to Asgard and stop Ragnar\00f6k, the destruction of his world, at the hands of the powerful and ruthless villain Hela.', 2017, 'Movie', 130, 0, 0, 'PG13', '', ''),
+(1520, 'The Fast and the Furious: Tokyo Drift ', 'A teenager becomes a major competitor in the world of drift racing after moving in with his father in Tokyo to avoid a jail sentence in America.', 2006, 'Movie', 104, 0, 0, 'PG13', '', ''),
+(1521, 'Joker', 'During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.', 2019, 'Movie', 122, 0, 0, 'R', '', '');
 CREATE CACHED TABLE "PUBLIC"."PLAYLIST" COMMENT 'not an ignored comment'(
     "ID" BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1500) DEFAULT ON NULL NOT NULL
 );
@@ -348,4 +349,9 @@ ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."FK_USER_ID" F
 ALTER TABLE "PUBLIC"."REL_CATEGORY__VIDEOS" ADD CONSTRAINT "PUBLIC"."FK_REL_CATEGORY__VIDEOS__VIDEOS_ID" FOREIGN KEY("VIDEOS_ID") REFERENCES "PUBLIC"."VIDEO"("ID") NOCHECK;
 ALTER TABLE "PUBLIC"."USER_PROFILE" ADD CONSTRAINT "PUBLIC"."FK_USER_PROFILE__PLAYLIST_ID" FOREIGN KEY("PLAYLIST_ID") REFERENCES "PUBLIC"."PLAYLIST"("ID") NOCHECK;
 ALTER TABLE "PUBLIC"."COMMENT" ADD CONSTRAINT "PUBLIC"."FK_COMMENT__POSTED_BY_ID" FOREIGN KEY("POSTED_BY_ID") REFERENCES "PUBLIC"."USER_PROFILE"("ID") NOCHECK;
+<<<<<<< HEAD
 ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."FK_AUTHORITY_NAME" FOREIGN KEY("AUTHORITY_NAME") REFERENCES "PUBLIC"."JHI_AUTHORITY"("NAME") NOCHECK;
+=======
+ALTER TABLE "PUBLIC"."JHI_USER_AUTHORITY" ADD CONSTRAINT "PUBLIC"."FK_AUTHORITY_NAME" FOREIGN KEY("AUTHORITY_NAME") REFERENCES "PUBLIC"."JHI_AUTHORITY"("NAME") NOCHECK;
+
+>>>>>>> origin/Loc

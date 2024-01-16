@@ -120,6 +120,10 @@ export const Video = () => {
                   <Translate contentKey="jhApp.video.videoURL">Video URL</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('videoURL')} />
                 </th>
+                <th className="hand" onClick={sort('imageURL')}>
+                  <Translate contentKey="jhApp.video.imageURL">Image URL</Translate>{' '}
+                  <FontAwesomeIcon icon={getSortIconByFieldName('imageURL')} />
+                </th>
                 <th />
               </tr>
             </thead>
@@ -142,6 +146,7 @@ export const Video = () => {
                     <Translate contentKey={`jhApp.Rating.${video.rating}`} />
                   </td>
                   <td>{video.videoURL}</td>
+                  <td>{video.imageURL}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/video/${video.id}`} color="info" size="sm" data-cy="entityDetailsButton">

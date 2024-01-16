@@ -14,6 +14,7 @@ export interface IVideo {
   season?: number | null;
   rating?: keyof typeof Rating | null;
   videoURL?: string | null;
+  imageURL?: string | null;
   comments?: IComment[] | null;
   categories?: ICategory[] | null;
   playlists?: IPlaylist[] | null;
