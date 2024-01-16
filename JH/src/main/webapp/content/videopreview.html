@@ -1,208 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Preview</title>
-
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f0f0f0;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-    }
-
-    header h1 {
-      margin: 0;
-    }
-
-    .content {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .video-image {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .video-title {
-      font-size: 24px;
-      margin: 20px 0;
-    }
-
-    .video-details {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-    }
-
-    .video-description {
-      margin: 20px 0;
-    }
-
-    .play-button {
-      font-size: 18px;
-      padding: 10px 20px;
-      background-color: #4285f4;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    .action-buttons {
-      display: flex;
-      justify-content: space-around;
-      margin: 20px 0;
-    }
-
-    .comment-section {
-      margin-top: 20px;
-      max-height: 200px; /* Set the maximum height for the comment section */
-      overflow-y: auto; /* Enable vertical scroll */
-      white-space: normal; /* Allow line breaks for comments */
-    }
-
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-
-    .genre-button {
-      font-size: 16px;
-      padding: 8px 16px;
-      background-color: #4285f4;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-<header>
-  <button onclick="goBack()">←</button>
-  <input type="text" placeholder="Search" />
-</header>
-
-<div class="content">
-  <img src="path/to/video-image.jpg" alt="Video Preview" class="video-image">
-  <h1 class="video-title">Video Title</h1>
-
-  <div class="video-details">
-    <p>Release Year: 2022</p>
-    <p>Classification: PG-13</p>
-    <p>Duration: 2h 30m</p>
-    <p>Episode: 1</p>
-    <p>Season: 1</p>
-    <p>Rating: 4.5</p>
-  </div>
-
-  <div class="video-description">
-    <p>Video Description goes here...</p>
-  </div>
-
-  <button class="play-button" onclick="playVideo()">Play Video</button>
-
-  <div class="action-buttons">
-      <button onclick="addToPlaylist()" id="playlistButton">Add to My Playlist</button>
-      <button onclick="thumbsUpDown()">Thumbs</button>
-      <button onclick="openCommentModal()">Add Comment</button>
-  </div>
-
-  <div class="comment-section">
-    <h2>Comments</h2>
-    <p>Comment 1... Comment 2... Comment 3... Comment 4... Comment 5... Comment 6... Comment 7... Comment 8...</p>
-    <!-- Add more comments as needed -->
-  </div>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title>Video Preview</title>-->
+<div>
+  <p>code is no longer in use it has been converted into react</p>
 </div>
+<!--  <style>-->
+<!--    body {-->
+<!--      margin: 0;-->
+<!--      padding: 0;-->
+<!--      font-family: 'Arial', sans-serif;-->
+<!--      background-color: #f0f0f0;-->
+<!--    }-->
 
-<footer>
-  <p>More videos of the same genre</p>
-  <button class="genre-button" id="genreButton">Go to Genre Page</button>
+<!--    header {-->
+<!--      display: flex;-->
+<!--      justify-content: space-between;-->
+<!--      align-items: center;-->
+<!--      padding: 10px;-->
+<!--      background-color: #333;-->
+<!--      color: white;-->
+<!--    }-->
 
-</footer>
+<!--    header h1 {-->
+<!--      margin: 0;-->
+<!--    }-->
 
-<script>
-  function goBack() {
-    window.history.back();
-  }
+<!--    .content {-->
+<!--      text-align: center;-->
+<!--      padding: 20px;-->
+<!--    }-->
+
+<!--    .video-image {-->
+<!--      max-width: 100%;-->
+<!--      height: auto;-->
+<!--    }-->
+
+<!--    .video-title {-->
+<!--      font-size: 24px;-->
+<!--      margin: 20px 0;-->
+<!--    }-->
+
+<!--    .video-details {-->
+<!--      display: flex;-->
+<!--      justify-content: space-around;-->
+<!--      flex-wrap: wrap;-->
+<!--    }-->
+
+<!--    .video-description {-->
+<!--      margin: 20px 0;-->
+<!--    }-->
+
+<!--    .play-button {-->
+<!--      font-size: 18px;-->
+<!--      padding: 10px 20px;-->
+<!--      background-color: #4285f4;-->
+<!--      color: white;-->
+<!--      border: none;-->
+<!--      cursor: pointer;-->
+<!--    }-->
+
+<!--    .action-buttons {-->
+<!--      display: flex;-->
+<!--      justify-content: space-around;-->
+<!--      margin: 20px 0;-->
+<!--    }-->
+
+<!--    .comment-section {-->
+<!--      margin-top: 20px;-->
+<!--      max-height: 200px; /* Set the maximum height for the comment section */-->
+<!--      overflow-y: auto; /* Enable vertical scroll */-->
+<!--      white-space: normal; /* Allow line breaks for comments */-->
+<!--    }-->
+
+<!--    footer {-->
+<!--      background-color: #333;-->
+<!--      color: white;-->
+<!--      text-align: center;-->
+<!--      padding: 10px;-->
+<!--    }-->
+
+<!--    .genre-button {-->
+<!--      font-size: 16px;-->
+<!--      padding: 8px 16px;-->
+<!--      background-color: #4285f4;-->
+<!--      color: white;-->
+<!--      border: none;-->
+<!--      cursor: pointer;-->
+<!--    }-->
+<!--  </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<header>-->
+<!--  <button onclick="goBack()">←</button>-->
+<!--  <input type="text" placeholder="Search" />-->
+<!--</header>-->
+
+<!--<div class="content">-->
+<!--  <img src="path/to/video-image.jpg" alt="Video Preview" class="video-image">-->
+<!--  <h1 class="video-title">Video Title</h1>-->
+
+<!--  <div class="video-details">-->
+<!--    <p>Release Year: 2022</p>-->
+<!--    <p>Classification: PG-13</p>-->
+<!--    <p>Duration: 2h 30m</p>-->
+<!--    <p>Episode: 1</p>-->
+<!--    <p>Season: 1</p>-->
+<!--    <p>Rating: 4.5</p>-->
+<!--  </div>-->
+
+<!--  <div class="video-description">-->
+<!--    <p>Video Description goes here...</p>-->
+<!--  </div>-->
+
+<!--  <button class="play-button" onclick="playVideo()">Play Video</button>-->
+
+<!--  <div class="action-buttons">-->
+<!--      <button onclick="addToPlaylist()" id="playlistButton">Add to My Playlist</button>-->
+<!--      <button onclick="thumbsUpDown()">Thumbs</button>-->
+<!--      <button onclick="openCommentModal()">Add Comment</button>-->
+<!--  </div>-->
+
+<!--  <div class="comment-section">-->
+<!--    <h2>Comments</h2>-->
+<!--    <p>Comment 1... Comment 2... Comment 3... Comment 4... Comment 5... Comment 6... Comment 7... Comment 8...</p>-->
+<!--    &lt;!&ndash; Add more comments as needed &ndash;&gt;-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<footer>-->
+<!--  <p>More videos of the same genre</p>-->
+<!--  <button class="genre-button" id="genreButton">Go to Genre Page</button>-->
+
+<!--</footer>-->
+
+<!--<script>-->
+<!--  function goBack() {-->
+<!--    window.history.back();-->
+<!--  }-->
 
 
 
-    function playVideo() {
-    const videoUrl = "https://nexflixclonefinal.s3.amazonaws.com/Toy+Story+(1995)+Trailer+%231+%7C+Movieclips+Classic+Trailers.mp4";
+<!--    function playVideo() {-->
+<!--    const videoUrl = "https://nexflixclonefinal.s3.amazonaws.com/Toy+Story+(1995)+Trailer+%231+%7C+Movieclips+Classic+Trailers.mp4";-->
 
-    if (videoUrl) {
-    // Check if a video URL is available
+<!--    if (videoUrl) {-->
+<!--    // Check if a video URL is available-->
 
-    window.open(videoUrl, "blank");
-  } else {
-    // Handle the case when there is no video URL
-    alert("Error: No video available.");
+<!--    window.open(videoUrl, "blank");-->
+<!--  } else {-->
+<!--    // Handle the case when there is no video URL-->
+<!--    alert("Error: No video available.");-->
 
-  }
-  }
+<!--  }-->
+<!--  }-->
 
-    function openCommentModal() {
-    // Basic example of a modal for comment input
-    const comment = prompt("Add a comment (200 characters or less):");
-    if (comment !== null && comment.length <= 200) {
+<!--    function openCommentModal() {-->
+<!--    // Basic example of a modal for comment input-->
+<!--    const comment = prompt("Add a comment (200 characters or less):");-->
+<!--    if (comment !== null && comment.length <= 200) {-->
 
-    // Add logic to handle the comment
+<!--    // Add logic to handle the comment-->
 
-    alert("Comment added: " + comment);
-  } else if (comment !== null) {
-    alert("Error: Comment must be 200 characters or less.");
-  }
-  }
+<!--    alert("Comment added: " + comment);-->
+<!--  } else if (comment !== null) {-->
+<!--    alert("Error: Comment must be 200 characters or less.");-->
+<!--  }-->
+<!--  }-->
 
-    let thumbsUpClickCount = 0;
+<!--    let thumbsUpClickCount = 0;-->
 
-    function thumbsUpDown() {
-    // Change button text based on click count
-    const thumbsButton = document.getElementById("thumbsButton");
-    thumbsUpClickCount++;
-    if (thumbsUpClickCount === 1) {
-    thumbsButton.innerText = "Thumbs Up";
-  } else if (thumbsUpClickCount === 2) {
-    thumbsButton.innerText = "Thumbs Down";
-  } else {
-    thumbsButton.innerText = "Thumbs";
-    thumbsUpClickCount = 0;
-  }
-  }
+<!--    function thumbsUpDown() {-->
+<!--    // Change button text based on click count-->
+<!--    const thumbsButton = document.getElementById("thumbsButton");-->
+<!--    thumbsUpClickCount++;-->
+<!--    if (thumbsUpClickCount === 1) {-->
+<!--    thumbsButton.innerText = "Thumbs Up";-->
+<!--  } else if (thumbsUpClickCount === 2) {-->
+<!--    thumbsButton.innerText = "Thumbs Down";-->
+<!--  } else {-->
+<!--    thumbsButton.innerText = "Thumbs";-->
+<!--    thumbsUpClickCount = 0;-->
+<!--  }-->
+<!--  }-->
 
-    function addToPlaylist() {
-    // Change image for the "Add to My Playlist" button
-    const playlistButton = document.getElementById("playlistButton");
-    playlistButton.src = "path/to/added-to-playlist-image.jpg";
-  }
+<!--    function addToPlaylist() {-->
+<!--    // Change image for the "Add to My Playlist" button-->
+<!--    const playlistButton = document.getElementById("playlistButton");-->
+<!--    playlistButton.src = "path/to/added-to-playlist-image.jpg";-->
+<!--  }-->
 
 
 
-    // Function to be executed when the button is pressed
+<!--    // Function to be executed when the button is pressed-->
 
-    function goToGenrePage() {
-    // Add your logic here
-    window.location.href = "http://localhost:9000/userhome";
-  }
+<!--    function goToGenrePage() {-->
+<!--    // Add your logic here-->
+<!--    window.location.href = "http://localhost:9000/userhome";-->
+<!--  }-->
 
-    // Event listener to trigger the function when the button is pressed
-    document.getElementById("genreButton").addEventListener("click", goToGenrePage);
+<!--    // Event listener to trigger the function when the button is pressed-->
+<!--    document.getElementById("genreButton").addEventListener("click", goToGenrePage);-->
 
-</script>
-</body>
-</html>
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

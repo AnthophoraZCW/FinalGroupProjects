@@ -24,7 +24,7 @@ export const VideoDetail = () => {
   }
   const navigate = useNavigate();
     const playVideo = () => {
-    const videoUrl = "https://nexflixclonefinal.s3.amazonaws.com/Toy+Story+(1995)+Trailer+%231+%7C+Movieclips+Classic+Trailers.mp4";
+    const videoUrl = "video.url";
     window.location.href = videoUrl;
 
     if (videoUrl) {
@@ -75,7 +75,7 @@ export const VideoDetail = () => {
   }
   // end of Tev's HTML Functions
 
-  
+
   const videoEntity = useAppSelector(state => state.video.entity);
   return (
     <Row>
@@ -84,7 +84,7 @@ export const VideoDetail = () => {
       </center>
       <h1 className="video-title">{videoEntity.title}</h1>
   {/* <Button class="play-button" tag={Link} to={videoEntity.videoURL}>Play Video</Button> */}
-  
+
   {videoEntity.videoURL && (
     <video height="640" width="720" controls>
       <source src={videoEntity.videoURL} type="video/mp4"/>
@@ -99,7 +99,7 @@ export const VideoDetail = () => {
         <p>Rating: {videoEntity.rating}</p>
       </div>
      <div className="video-description">
-     <p>Description: {videoEntity.description}</p> 
+     <p>Description: {videoEntity.description}</p>
  </div>
 
 
@@ -176,7 +176,7 @@ export const VideoDetail = () => {
               <Translate contentKey="jhApp.video.imageURL">Image URL</Translate>
             </span>
           </dt>
-          <Link to= {videoEntity.imageURL}> 
+          <Link to= {videoEntity.imageURL}>
           <dd>{videoEntity.imageURL}</dd>
           </Link>
         </dl>
