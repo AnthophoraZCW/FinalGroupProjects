@@ -27,6 +27,8 @@ body {
     max-width: 25%;
     height: auto;
     text-align: center;
+    border: 3px solid rgba(48, 47, 47, 0.83); /* Adjust the border thickness and color as needed */
+        border-radius: 5px; /* for rounded corners */
   }
 
   .video-title {

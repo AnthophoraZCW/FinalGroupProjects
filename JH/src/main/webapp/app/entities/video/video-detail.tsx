@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import 'app/userhome/cssfiles/videopreview.scss';
 import Request from 'app/userhome/requests';
 import axios from 'app/userhome/axios';
-import { set } from 'lodash';
+
 
 export const VideoDetail = () => {
   const dispatch = useAppDispatch();
@@ -65,11 +65,13 @@ export const VideoDetail = () => {
   // }, []);
 //  console.log(user);
 
-  // Tev's HTML Functions
+  //Functions
   function goBack() {
     window.history.back();
   }
-    function openCommentModal() {
+
+    // Function to post comment  
+    function openCommentModule() {
     // Basic example of a modal for comment input
     const temp = Math.floor(Math.random() * 3)+1;
     const comment = prompt("Add a comment (200 characters or less):");
@@ -120,11 +122,7 @@ export const VideoDetail = () => {
   //   const playlistButton = document.getElementById("playlistButton");
   //   playlistButton.src = "path/to/added-to-playlist-image.jpg";
   // }
-    function goToGenrePage() {
-    // Add your logic here
-    window.location.href = "http://localhost:9000/userhome";
-  }
-  // end of Tev's HTML Functions
+  // Functions
 
   
   const videoEntity = useAppSelector(state => state.video.entity);
@@ -166,7 +164,7 @@ export const VideoDetail = () => {
       ))}
     </div>
     <Button className="comment-button" onClick={thumbsUpDown} id="thumbsButton">Like</Button>
-    <Button className="comment-button" onClick={openCommentModal}>Add a Comment</Button> 
+    <Button className="comment-button" onClick={openCommentModule}>Add a Comment</Button> 
     <Button onClick={goBack}>Back</Button> 
 
     </Row>
